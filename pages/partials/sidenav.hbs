@@ -1,0 +1,26 @@
+<ul id="slide-out" class="sidenav">
+  {{#if isHome}}
+    <li class="active"><a class="waves-effect waves-red" href="/">Home</a></li>
+  {{else}}
+    <li><a class="waves-effect waves-red" href="/">Home</a></li>
+  {{/if}}
+
+  {{#if isCourses}}
+    <li class="active"><a class="waves-effect waves-red" href="/courses">Courses</a></li>
+  {{else}}
+    <li><a class="waves-effect waves-red" href="/courses">Courses</a></li>
+  {{/if}}
+
+  {{#if isAdd}}
+    <li class="active"><a class="waves-effect waves-red" href="/add">Add course</a></li>
+  {{else}}
+    <li><a class="waves-effect waves-red" href="/add">Add course</a></li>
+  {{/if}}
+
+  {{#if isCart}}
+    <li class="active"><a class="waves-effect waves-red" href="/cart"><i class="material-icons">shopping_cart</i></a></li>
+  {{else}}
+    <li><a class="waves-effect waves-red" href="/cart"><i class="material-icons">shopping_cart</i></a></li>
+  {{/if}}
+</ul>
+

@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Angular",
+    "price": "200",
+    "image": "https://www.mattspaulding.org/images/angular.jpg",
+    "id": "b8e35780-6b84-44cf-8510-b87b68a62d5e"
+  },
+  {
+    "title": "VueJS",
+    "price": "500",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png",
+    "id": "797820a1-ebb0-44fa-ad09-6f7369ddac77"
+  }
+]
