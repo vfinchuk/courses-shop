@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const elems = document.querySelectorAll('.sidenav');
   const instances = M.Sidenav.init(elems);
 });
@@ -10,8 +10,23 @@ function toCurrency(price) {
   }).format(price)
 }
 
+function toDate(date) {
+  return new Intl.DateTimeFormat('ru-UA', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }).format(new Date(date))
+}
+
 document.querySelectorAll('.price').forEach($el => {
   $el.textContent = toCurrency($el.textContent)
+})
+
+document.querySelectorAll('.date').forEach($el => {
+  $el.textContent = toDate($el.textContent)
 })
 
 const $card = document.querySelector('#cart')

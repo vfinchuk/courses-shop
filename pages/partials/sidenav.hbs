@@ -17,6 +17,12 @@
     <li><a class="waves-effect waves-red" href="/add">Add course</a></li>
   {{/if}}
 
+  {{#if isOrders}}
+    <li class="active"><a class="waves-effect waves-red" href="/orders">Orders</a></li>
+  {{else}}
+    <li><a class="waves-effect waves-red" href="/orders">Orders</a></li>
+  {{/if}}
+
   {{#if isCart}}
     <li class="active"><a class="waves-effect waves-red" href="/cart"><i class="material-icons">shopping_cart</i></a></li>
   {{else}}
