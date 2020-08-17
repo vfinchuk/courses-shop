@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const elems = document.querySelectorAll('.sidenav');
-  const instances = M.Sidenav.init(elems);
-});
+  M.Sidenav.init(document.querySelectorAll('.sidenav'))
+  M.Tabs.init(document.querySelectorAll('.tabs'))
+})
 
 function toCurrency(price) {
   return new Intl.NumberFormat('ru-UA', {
@@ -34,9 +34,13 @@ if ($card) {
   $card.addEventListener('click', event => {
     if (event.target.classList.contains('js-remove')) {
       const id = event.target.dataset.id
+      const csrf = event.target.dataset.csrf
 
       fetch('/cart/remove/' + id, {
-        method: 'delete'
+        method: 'delete',
+        headers: {
+          'X-XSRF-TOKEN': csrf
+        }
       }).then(res => res.json())
         .then(cart => {
           if (cart.courses.length) {

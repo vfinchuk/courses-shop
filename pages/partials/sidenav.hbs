@@ -4,29 +4,36 @@
   {{else}}
     <li><a class="waves-effect waves-red" href="/">Home</a></li>
   {{/if}}
-
   {{#if isCourses}}
     <li class="active"><a class="waves-effect waves-red" href="/courses">Courses</a></li>
   {{else}}
     <li><a class="waves-effect waves-red" href="/courses">Courses</a></li>
   {{/if}}
-
-  {{#if isAdd}}
-    <li class="active"><a class="waves-effect waves-red" href="/add">Add course</a></li>
+  {{#if isAuth}}
+    {{#if isAdd}}
+      <li class="active"><a class="waves-effect waves-red" href="/add">Add course</a></li>
+    {{else}}
+      <li><a class="waves-effect waves-red" href="/add">Add course</a></li>
+    {{/if}}
+    {{#if isOrders}}
+      <li class="active"><a class="waves-effect waves-red" href="/orders">Orders</a></li>
+    {{else}}
+      <li><a class="waves-effect waves-red" href="/orders">Orders</a></li>
+    {{/if}}
+    {{#if isCart}}
+      <li class="active"><a class="waves-effect waves-red" href="/cart"><i class="material-icons">shopping_cart</i>Cart</a>
+      </li>
+    {{else}}
+      <li><a class="waves-effect waves-red" href="/cart"><i class="material-icons">shopping_cart</i>Cart</a></li>
+    {{/if}}
+    <li><a class="waves-effect waves-red" href="/auth/logout"><i class="material-icons">keyboard_return</i>Logout</a></li>
   {{else}}
-    <li><a class="waves-effect waves-red" href="/add">Add course</a></li>
-  {{/if}}
-
-  {{#if isOrders}}
-    <li class="active"><a class="waves-effect waves-red" href="/orders">Orders</a></li>
-  {{else}}
-    <li><a class="waves-effect waves-red" href="/orders">Orders</a></li>
-  {{/if}}
-
-  {{#if isCart}}
-    <li class="active"><a class="waves-effect waves-red" href="/cart"><i class="material-icons">shopping_cart</i></a></li>
-  {{else}}
-    <li><a class="waves-effect waves-red" href="/cart"><i class="material-icons">shopping_cart</i></a></li>
+    {{#if isLogin}}
+      <li class="active"><a class="waves-effect waves-red" href="/auth/login#login">Login<i
+          class="material-icons">input</i></a></li>
+    {{else}}
+      <li><a class="waves-effect waves-red" href="/auth/login#login">Login<i class="material-icons">input</i></a></li>
+    {{/if}}
   {{/if}}
 </ul>
 
